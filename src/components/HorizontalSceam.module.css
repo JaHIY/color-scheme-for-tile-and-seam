@@ -1,0 +1,72 @@
+.horizontal-sceam {
+    height: 5px;
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+}
+
+.champagne-gold{
+    background-image: url(../images/sceams/h/champagne-gold.png);
+}
+.concubine-brown{
+    background-image: url(../images/sceams/h/concubine-brown.png);
+}
+.diamond-gold{
+    background-image: url(../images/sceams/h/diamond-gold.png);
+}
+.flax-platinum{
+    background-image: url(../images/sceams/h/flax-platinum.png);
+}
+.ivory-white{
+    background-image: url(../images/sceams/h/ivory-white.png);
+}
+.light-khaki{
+    background-image: url(../images/sceams/h/light-khaki.png);
+}
+.mysterious-black{
+    background-image: url(../images/sceams/h/mysterious-black.png);
+}
+.pink-gold{
+    background-image: url(../images/sceams/h/pink-gold.png);
+}
+.primrose-yellow{
+    background-image: url(../images/sceams/h/primrose-yellow.png);
+}
+.pure_white{
+    background-image: url(../images/sceams/h/pure_white.png);
+}
+.quicksand-silver{
+    background-image: url(../images/sceams/h/quicksand-silver.png);
+}
+.rice-stone-yellow{
+    background-image: url(../images/sceams/h/rice-stone-yellow.png);
+}
+.sky-blue{
+    background-image: url(../images/sceams/h/sky-blue.png);
+}
+.smoke-grey{
+    background-image: url(../images/sceams/h/smoke-grey.png);
+}
+.starlight-gold{
+    background-image: url(../images/sceams/h/starlight-gold.png);
+}
+.starlight-silver{
+    background-image: url(../images/sceams/h/starlight-silver.png);
+}
+.starry-sky-bright-brown{
+    background-image: url(../images/sceams/h/starry-sky-bright-brown.png);
+}
+.starry-sky-bright-gold{
+    background-image: url(../images/sceams/h/starry-sky-bright-gold.png);
+}
+.starry-sky-bright-silver{
+    background-image: url(../images/sceams/h/starry-sky-bright-silver.png);
+}
+.starry-sky-fantasy-gold{
+    background-image: url(../images/sceams/h/starry-sky-fantasy-gold.png);
+}
+.starry-sky-glaze{
+    background-image: url(../images/sceams/h/starry-sky-glaze.png);
+}
+.starry-sky-silvery-grey{
+    background-image: url(../images/sceams/h/starry-sky-silvery-grey.png);
+}
