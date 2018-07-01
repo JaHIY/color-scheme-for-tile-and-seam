@@ -60,15 +60,16 @@ class Index extends React.Component {
 
     updateDimensions() {
         this.setState((prevState) => {
-            return R.set(
-                R.lensPath(['window', 'width']),
-                window.innerWidth,
+            return R.compose(
+                R.set(
+                    R.lensPath(['window', 'width']),
+                    window.innerWidth
+                ),
                 R.set(
                     R.lensPath(['window', 'height']),
-                    window.innerHeight,
-                    prevState
+                    window.innerHeight
                 )
-            );
+            )(prevState);
         });
     }
 
@@ -85,15 +86,16 @@ class Index extends React.Component {
         const VerticalSceamWidth = Math.floor((this.state.window.width - 16) / (horizontalTileNum * 25 + horizontalTileNum - 1));
         const TileSideLength = Math.floor(VerticalSceamWidth * 25);
 
-        const TileProps = R.set(
-            R.lensPath(['style', 'height']),
-            `${TileSideLength}px`,
+        const TileProps = R.compose(
+            R.set(
+                R.lensPath(['style', 'height']),
+                `${TileSideLength}px`
+            ),
             R.set(
                 R.lensPath(['style', 'width']),
-            `${TileSideLength}px`,
-                this.state.TileProps
+                `${TileSideLength}px`
             )
-        );
+        )(this.state.TileProps);
 
         const HorizontalSceamProps = R.set(
             R.lensPath(['style', 'height']),
@@ -201,15 +203,16 @@ class Index extends React.Component {
                                 );
                                 const styleName = el.getAttribute(attr);
                                 this.setState((prevState) => {
-                                    return R.set(
-                                        R.lensPath(['VerticalSceamProps', 'styleName']),
-                                        styleName,
+                                    return R.compose(
+                                        R.set(
+                                            R.lensPath(['VerticalSceamProps', 'styleName']),
+                                            styleName
+                                        ),
                                         R.set(
                                             R.lensPath(['HorizontalSceamProps', 'styleName']),
-                                            styleName,
-                                            prevState
+                                            styleName
                                         )
-                                    );
+                                    )(prevState);
                                 });
                             },
                         }}
