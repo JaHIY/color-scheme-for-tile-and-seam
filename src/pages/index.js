@@ -61,12 +61,12 @@ class Index extends React.Component {
     updateDimensions() {
         this.setState((prevState) => {
             return R.compose(
-                R.set(
-                    R.lensPath(['window', 'width']),
+                R.assocPath(
+                    ['window', 'width'],
                     window.innerWidth
                 ),
-                R.set(
-                    R.lensPath(['window', 'height']),
+                R.assocPath(
+                    ['window', 'height'],
                     window.innerHeight
                 )
             )(prevState);
@@ -87,24 +87,24 @@ class Index extends React.Component {
         const TileSideLength = Math.floor(VerticalSceamWidth * 25);
 
         const TileProps = R.compose(
-            R.set(
-                R.lensPath(['style', 'height']),
+            R.assocPath(
+                ['style', 'height'],
                 `${TileSideLength}px`
             ),
-            R.set(
-                R.lensPath(['style', 'width']),
+            R.assocPath(
+                ['style', 'width'],
                 `${TileSideLength}px`
             )
         )(this.state.TileProps);
 
-        const HorizontalSceamProps = R.set(
-            R.lensPath(['style', 'height']),
+        const HorizontalSceamProps = R.assocPath(
+            ['style', 'height'],
             `${VerticalSceamWidth}px`,
             this.state.HorizontalSceamProps
         );
 
-        const VerticalSceamProps = R.set(
-            R.lensPath(['style', 'width']),
+        const VerticalSceamProps = R.assocPath(
+            ['style', 'width'],
             `${VerticalSceamWidth}px`,
             this.state.VerticalSceamProps
         );
@@ -146,8 +146,8 @@ class Index extends React.Component {
                                 );
                                 const styleName = el.getAttribute(attr);
                                 this.setState((prevState) => {
-                                    return R.set(
-                                        R.lensPath(['TileProps', 'styleName']),
+                                    return R.assocPath(
+                                        ['TileProps', 'styleName'],
                                         styleName,
                                         prevState
                                     );
@@ -204,12 +204,12 @@ class Index extends React.Component {
                                 const styleName = el.getAttribute(attr);
                                 this.setState((prevState) => {
                                     return R.compose(
-                                        R.set(
-                                            R.lensPath(['VerticalSceamProps', 'styleName']),
+                                        R.assocPath(
+                                            ['VerticalSceamProps', 'styleName'],
                                             styleName
                                         ),
-                                        R.set(
-                                            R.lensPath(['HorizontalSceamProps', 'styleName']),
+                                        R.assocPath(
+                                            ['HorizontalSceamProps', 'styleName'],
                                             styleName
                                         )
                                     )(prevState);
